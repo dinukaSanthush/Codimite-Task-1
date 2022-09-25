@@ -19,7 +19,7 @@ CREATE TABLE todo ( name VARCHAR(20), Description VARCHAR(40), status VARCHAR(20
 
 ### Exit Container and go to the project directory
 
-npm install --save express mysql
+npm install
 
 npm start
 
