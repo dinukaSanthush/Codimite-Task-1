@@ -3,7 +3,7 @@
 
 ## Install npm & docker
 
-###  mysql database running on a container
+###  Database running on a container
 
 docker run --name mysql -p 127.0.0.1:3306:3306 -e MYSQL_ROOT_PASSWORD=123 -d mariadb:latest
 
