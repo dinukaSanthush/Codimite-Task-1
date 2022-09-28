@@ -1,8 +1,10 @@
+//import modules
 const express = require('express');
 const connection = require('../connection');
 const router = express.Router();
 
- 
+ // add new user & todo from table 'todo'
+
 router.post('/create',(req,res,next)=>{
       
     let product = req.body;
@@ -19,6 +21,9 @@ router.post('/create',(req,res,next)=>{
 
 });
 
+
+// list all users & todo from table 'todo'
+
 router.get('/read', (req,res,next)=>{
 
     var query = "select * from todo";
@@ -33,7 +38,9 @@ router.get('/read', (req,res,next)=>{
     });
 });
 
-router.delete('/delete/:name',(req,res,next)=>{
+//delete user & todo from table 'todo'
+
+router.delete('/delete/:name',(req,res,next)=>{ 
     const name = req.params.name;
     var query = "delete from todo where name=?";
     connection.query(query,[name],(err,results)=>{
@@ -50,9 +57,6 @@ router.delete('/delete/:name',(req,res,next)=>{
     
     });
 });
-
-
-
 
 
 module.exports = router;
